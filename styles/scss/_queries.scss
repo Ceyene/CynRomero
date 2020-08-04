@@ -1,0 +1,234 @@
+/* ------------------------------- *
+ *   Wider Screen Cellphone Styles  *
+ * ------------------------------- */
+
+
+
+
+/*                                 */
+
+/* ------------------------------- *
+ * Rotated Screen Cellphone Styles *
+ * ------------------------------- */
+
+/*                                 */
+
+/* ------------------------------- *
+ * -------- Tablet Styles -------- *
+ * ------------------------------- */
+@media (min-width: 768px) {
+
+/* Padding of Navbar */
+
+/*Horizontal Menu*/
+.menu {
+    @include flexmenuhor;
+    visibility: visible;
+    position: relative;
+    top: 0;
+    background-color: inherit;
+    height: 100%;
+    width: auto;
+
+    &__item {
+        a {
+            color: inherit;
+        }
+    }
+}
+
+/*Erase Hamburguer Menu*/
+.toggle {
+    display: none;
+}
+.burger {
+    display: none;
+}
+
+/* Erase line breaks */
+.break {
+    display: none;
+}
+
+/* Size of paragraph in Hero */
+.welcome {
+    padding: $padd-ver-mid;
+}
+
+/* Size of Buttons */
+.btn {
+    display: inline-block;
+    padding: $padding $padd-ver-mid;
+    width: auto;
+}
+
+/* About Section Layout */
+
+
+/* Knowledge Section Layout */
+
+/* Projects Section Layout */
+
+
+/* Contact Section Layout */
+
+
+/* ----- End of Tablet Styles ---- */
+/*                                 */
+
+/* ------------------------------- *
+ * ------- Desktop Styles -------- *
+ * ------------------------------- */
+@media (min-width: 900px) {
+
+    /* Text Styles */
+    .title {
+        @include bigfontdesk;
+    }
+    
+    .text {
+        @include normalfontdesk;
+    }
+
+    /* Buttons Styles */
+    .btn {
+        &:hover {
+            background: $button-gradient;
+            color: $back-color;
+            text-decoration: none;
+        }
+    }
+
+    /* Links Styles */
+    .menu {
+        &__item {
+            a {
+                &:hover {
+                    @include link-desk;
+                }
+            }
+        }
+    }
+
+    /* Navigation Bar Styles */
+    .navbar {
+        padding: $padding $padd-hor-mid;
+
+        img {
+            width: $logo-desk-size;
+        }
+    }
+
+    /* Hero Section Styles */
+    .welcome {
+
+        .maintitle {
+            @include biggerfont;
+        }
+    }
+
+    /* About Section Styles */
+    .about {
+        padding-top: $padd-ver-big;
+        padding-bottom: $padd-ver-big;
+
+        
+    }
+
+    /* Knowledge Section Styles */
+    .knowledge {
+        padding-top: $padd-ver-big;
+        padding-bottom: $padd-ver-big;
+
+        &__container {
+            padding-top: $padd-ver-mid;
+        }
+    }
+
+    .tech {
+        width: 25%;
+    }
+
+    /* Projects Section Styles */
+    .projects {
+        &__examples {
+            grid-template-columns: 1fr 1fr;
+            padding-top: $padd-ver-mid;
+        }
+
+        .description {
+            a {
+                &:hover {
+                    color: $back-color;
+                }
+            }
+        }
+    }
+
+    /* Contact Section Styles */
+    .contact {
+        &__form {
+            width: 70%;
+        }
+    }
+
+    /* Footer Section Styles */
+    .footer {
+        @include flexmenuhor;
+        padding-right: $padd-hor-mid;
+        padding-left: $padd-hor-mid;
+    }
+
+    /* Social Icons Styles */
+    .social {
+        margin: 0;
+        justify-self: flex-end;
+        width: 30%;
+        padding: 0;
+
+        i {
+            margin: 0 $margin;
+
+            &:hover {
+                color: $light-color;
+                transform: scale(1.5);
+                transition: 1s 3ms ease;
+            }
+        }
+    }
+}
+/*                                 */
+
+ /* ------------------------------- *
+ * ----- Wider Desktop Styles ----- *
+ * ------------------------------- */
+
+@media (min-width: 1280px) {
+    .welcome {
+        padding-left: $padd-hor-big;
+        padding-right: $padd-hor-big;
+    }
+
+    .about {
+        padding-left: $padd-hor-mid;
+        padding-right: $padd-hor-mid;
+
+        .title {
+            padding-left: $padd-hor-mid;
+        }
+    }
+
+    .knowledge {
+        .title {
+            padding-left: $padd-hor-big;
+        }
+    }
+
+    .projects {
+        padding-left: $padd-hor-big;
+        padding-right: $padd-hor-big;
+    }
+}
+}
+ /* ---- End of Desktop Styles ---- */
+ /*                                 */

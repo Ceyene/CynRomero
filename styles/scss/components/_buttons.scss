@@ -1,0 +1,52 @@
+/* ------------------------------- *
+ * ----------- Buttons ----------- *
+ * ------------------------------- */
+.btn {
+    @include link;
+    font-weight: 500;
+    display: inline-block;
+    background: $light-color;
+    padding: 0.8rem;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    transition: all 0.2s ease-in;
+}
+/* -------- End of Buttons ------- */
+/*                                 */
+
+/* ------------------------------- *
+ * --------- Social Links -------- *
+ * ------------------------------- */
+.social {
+    width: 60vw;
+    margin: $margin-center;
+    display: flex;
+    justify-content: space-between;
+
+    i {
+        font-size: 2rem;
+        @extend %normalfont;
+    }
+}
+/* ----- End of Social Links ----- */
+/*                                 */
+
+/* ------------------------------- *
+ * ------ Technologies Icons ----- *
+ * ------------------------------- */
+.tech {
+    display: inline-block;
+    text-align: center;
+    width: 35%;
+    margin: $margin;
+
+        i {
+            font-size: 4rem;
+            color: $dark-color;
+        }
+}
+/* -- End of Technologies Icons -- */
+/*                                 */

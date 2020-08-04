@@ -1,0 +1,29 @@
+.contact {
+    &__form {
+        box-shadow: 0 0 5px #c1bcbc;
+        padding: $padding;
+        border: 3px solid $dark-color;
+        width: 80%;
+        font-family: $main-font;
+
+        label, 
+        input,
+        textarea {
+            font-size: 1rem;
+            margin: 1rem 0;
+            padding: 0.5rem;
+            width: 100%;
+            height: auto;
+            outline: none;
+        }
+
+        input,
+        textarea {
+
+            &:hover {
+                
+                border: 3px solid $light-color;
+            }
+        }
+    }
+}

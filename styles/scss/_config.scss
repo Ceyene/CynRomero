@@ -1,0 +1,146 @@
+/* ------------------------------- *
+ * ------------ Resets ----------- *
+ * ------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $back-color;
+    color: $darker-color;
+    font-family: $main-font;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: $darker-color;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 400;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+/* -------- End of Resets -------- */
+/*                                 */
+
+/* ------------------------------- *
+ * ----- Some General Styles ----- *
+ * ------------------------------- */
+%bigfont {
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+    letter-spacing: 0;
+}
+
+%midfont {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+%normalfont {
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+%smallfont {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+}
+/////////////////////////////////////
+
+@mixin biggerfont {
+    font-size: 4rem;
+    line-height: 4.6rem;
+}
+
+@mixin bigfontdesk {
+    font-size: 3rem;
+    line-height: 3.375rem;
+}
+
+@mixin normalfontdesk {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+////////////////////////////////////
+
+@mixin link {
+    @extend %normalfont;
+    text-transform: uppercase;
+    color: $darker-color;
+    letter-spacing: 0;
+}
+
+@mixin link-desk {
+
+    &:hover {
+        color: $light-color;
+    }
+
+    &:active {
+        color: $lighter-color;
+    }
+}
+/////////////////////////////////////
+
+
+@mixin gridpics {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+/////////////////////////////////////
+
+
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/////////////////////////////////////
+
+@mixin flexpics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/////////////////////////////////////
+@mixin flexmenuhor {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+////////////////////////////////////
+
+/* Text Styles */
+.title {
+    @extend %bigfont;
+    font-family: $title-font;
+}
+
+.text {
+    @extend %smallfont;
+    padding: $padding 0;
+}
+
+.description {
+    @extend %midfont;
+    font-family: $title-font;
+    font-weight: 700;
+    padding-top: $padding;
+}
+/* ---- End of General Styles ---- */
+/*                                 */

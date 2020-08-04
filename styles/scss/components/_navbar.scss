@@ -1,0 +1,107 @@
+/* ------------------------------- *
+ * ------- Navigation Bar -------- *
+ * ------------------------------- */
+.navbar {
+    display: flex;
+    @include flexmenuhor;
+    padding: $padd-ver-small $padding;
+
+    img {
+        width: $logo-mob-size;
+    }
+}
+/* ---- End of Navigation Bar ---- */
+/*                                 */
+
+/* ------------------------------- *
+ * ------- Hamburguer Menu ------- *
+ * ------------------------------- */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    top: 2.8rem;
+    right: 0;
+    width: 100%;
+    height: 18.75rem;
+    z-index: 2;
+    visibility: hidden;
+    overflow: hidden;
+    background-color: $dark-color;
+
+    &__item {
+        padding: $padding;
+
+        a {
+          @include link;
+          color: $back-color;
+        }
+    }
+  }
+
+  /* Checkbox */
+  .toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    cursor: pointer;
+    width: 1.125rem;
+    height: 0.75rem;
+    opacity: 0;
+
+    &:checked + .burger > div:before,
+    &:checked + .burger > div:after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+
+    &:checked:hover + .burger > div {
+        transform: rotate(225deg);
+      }
+    
+    &:checked ~ .menu {
+        visibility: visible;
+    }
+  }
+
+  /* Burger Icon */
+.burger {
+    @include flexbox;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 3.1rem;
+    height: 2.8rem;
+    padding: $padding;
+
+    > div {
+        @include flexbox;
+        position: relative;
+        flex: none;
+        width: 100%;
+        height: 0.125rem;
+        background: $darker-color;
+        transition: all 0.4s ease;
+      }
+
+    > div::before,
+    > div::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -0.3rem;
+        width: 100%;
+        height: 0.125rem;
+        background: $darker-color;
+        }
+
+    > div::after {
+        top: 0.3rem;
+    }
+  }
+/* ---- End of Hamburguer Menu ---- */
+/*                                  */

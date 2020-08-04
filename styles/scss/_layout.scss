@@ -1,0 +1,112 @@
+/* ------------------------------- *
+ * ------- Welcome Section ------- *
+ * ------------------------------- */
+.welcome {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-image: url('https://image.freepik.com/vector-gratis/colorido-fondo-acuarela_23-2148492952.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+
+    .maintitle {
+        @extend %bigfont;
+        display: inline;
+        font-family: $title-font;
+
+    }
+
+}
+/* ----- End of Hero Section ----- */
+/*                                 */
+
+/* ------------------------------- *
+ * ------ About Me Section ------- *
+ * ------------------------------- */
+.about {
+    padding: $padding;
+
+    .text {
+        padding-top: $padd-ver-mid;
+    }
+}
+/* --- End of About Me Section --- */
+/*                                 */
+
+/* ------------------------------- *
+ * ------ Knowledge Section ------ *
+ * ------------------------------- */
+.knowledge {
+
+    &__container {
+        @include flexpics;
+        width: 80%;
+        margin: $margin-center;
+        justify-content: center;
+    }
+
+    .title {
+        padding: $padding;
+    }
+}
+/* ---- End of Guests Section ---- */
+/*                                 */
+
+/* ------------------------------- *
+ * ------ Projects Section ------- *
+ * ------------------------------- */
+ .projects {
+    padding: $padd-ver-big $padding;
+    background-image: $section-gradient;
+
+    &__flex {
+        @include flexbox;
+    }
+
+    &__examples {
+        @include gridpics;
+        justify-items: center;
+        padding-top: $padding;
+    }
+
+    .project {
+        padding: $padding;
+    }
+
+    .title {
+        color: $back-color;
+    }
+}
+/* --- End of Projects Section --- */
+/*                                 */
+
+/* ------------------------------- *
+ * ------ Contact Section ------ *
+ * ------------------------------- */
+.contact {
+    @include flexbox;
+    flex-direction: column;
+    padding: $padd-ver-mid $padding;
+
+    .title {
+        text-align: center;
+        padding-bottom: $padd-ver-big;
+    }
+}
+/* --- End of Contact Section -- */
+/*                                 */
+
+/* ------------------------------- *
+ * ----------- Footer ------------ *
+ * ------------------------------- */
+.footer {
+    @include flexbox;
+    flex-direction: column;
+    padding: $padding;
+
+}
+/* -------- End of Footer -------- */
+/*                                 */
