@@ -11,4 +11,4 @@ Made with:
   - SCSS
 
 See it in:
->>>>>>> 59fa554307963369ec9d731bce21e4339ac9de6c
+https://cynthiaromero.netlify.app/
